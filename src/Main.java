@@ -20,6 +20,15 @@ public class Main{
         c1.start();
         p2.start();
         c2.start();
+
+        try {
+            c1.join();
+            c2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Finished successfully!");
     }
 
 
